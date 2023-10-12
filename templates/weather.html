@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} Weather</title>
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?nature,clouds');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            color: #ff6347; 
+        }
+        p {
+            color: #4682b4; 
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 1rem;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>{{ title }} Weather</h1>
+    <p>{{ status }} and {{ temp }} °C</p> 
+    <p>Feels like {{ feels_like }} °C</p> 
+
+    <form action="/weather">
+        <input type="text" name="city" id="city" placeholder="Enter a City" required /> 
+        <button type="submit">Find Weather</button>
+    </form>
+</body>
+
+</html>
