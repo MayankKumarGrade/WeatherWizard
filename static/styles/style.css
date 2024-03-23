@@ -13,22 +13,53 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center content vertically */
     gap: 2rem;
     font-size: 2rem;
 }
 
+h1, p {
+    text-align: center; /* Center the title and weather result */
+}
+
+p {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    padding: 0.5rem; /* Some padding to give space around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+}
+
+
+form {
+    width: 90%; /* Increased width */
+    max-width: 560px; /* Increased maximum width */
+    background-color: rgba(255, 255, 255, 0.1); /* White background */
+    padding: 2rem; /* Increased padding */
+    border-radius: 10px;
+    display: flex; /* Make form a flex container */
+    flex-direction: row; /* Stack the children horizontally */
+    align-items: center; /* Center the children vertically */
+    justify-content: space-between; /* Add space between input and button */
+}
+
 input, button {
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1.8rem; /* Increased font size */
+    padding: 1rem 1rem; /* Increased vertical padding and decreased horizontal padding */
     border-radius: 10px;
     border: none;
+    width: 45%; /* Adjust width to fit side by side */
 }
 
 button {
     background-color: #FF6347;
     color: white;
+    overflow: hidden; /* Keep the text inside the button */
+}
+
+button div {
+    position: relative; /* Position the text inside the button */
 }
 
 input {
     border-bottom: 2px solid #8B4513;
+    text-align: center;
 }
